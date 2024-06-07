@@ -6,6 +6,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
+  {
+    path: "/:projectId",
+    element: "",
+  },
 ]);
 
 function App() {
