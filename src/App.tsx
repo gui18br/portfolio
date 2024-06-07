@@ -1,3 +1,15 @@
-export default function App() {
-  return <h1 className="text-3xl font-bold underline">Portfolio</h1>;
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Home } from "./screens/home/Home";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+]);
+
+function App() {
+  return <RouterProvider router={router} />;
 }
+
+export default App;
