@@ -20,7 +20,7 @@ export const Works = () => {
       title: "Compass UOL",
       date: "07/2023 - 12/2023",
       description:
-        "Atuei como estagiário no programa de bolsas da Compass UOL. Nesse estágio fui responsável por estudar tecnologias, linguagens de programação e frameworks. Através de algumas dessas tecnologias foram realizados projetos mobile e web, tanto individuais quanto em grupo, aplicando metodologias como Agile e Scrum.",
+        "Durante meu estágio no programa de bolsas da Compass UOL, fui responsável por estudar tecnologias, linguagens de programação e frameworks. Através de ferramentas como TypeScript e React Native, participei de projetos mobile e web, tanto individuais quanto em grupo, aplicando metodologias ágeis como Agile e Scrum.",
     },
   ];
 
