@@ -8,7 +8,7 @@ export const NavBar = () => {
         <div className="flex justify-between pt-3 pb-3">
           <div className="flex items-center gap-5">
             <img src={avatar} alt="" className="w-20 h-20 rounded-full" />
-            <h1 className="uppercase italic text-lg text-seconday">
+            <h1 className="uppercase italic text-lg text-[#E9E0D9] ">
               Guilherme Novais
             </h1>
           </div>
