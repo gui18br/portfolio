@@ -20,91 +20,76 @@ export const Skills = () => {
       id: 1,
       name: "JavaScript",
       logo: jsLogo,
-      documentation: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     },
     {
       id: 2,
       name: "TypeScript",
       logo: tsLogo,
-      documentation: "https://www.typescriptlang.org/docs",
     },
     {
       id: 3,
       name: "HTML",
       logo: htmlLogo,
-      documentation: "https://developer.mozilla.org/en-US/docs/Web/HTML",
     },
     {
       id: 4,
       name: "CSS",
       logo: cssLogo,
-      documentation: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     },
     {
       id: 5,
       name: "Java",
       logo: javaLogo,
-      documentation: "https://docs.oracle.com/en/java/",
     },
     {
       id: 6,
       name: "React",
       logo: reactLogo,
-      documentation: "https://react.dev/",
     },
     {
       id: 7,
       name: "React Native",
       logo: reactLogo,
-      documentation: "https://reactnative.dev/docs/environment-setup",
     },
     {
       id: 8,
       name: "Node.js",
       logo: nodeLogo,
-      documentation: "https://nodejs.org/en/docs/",
     },
     {
       id: 9,
       name: "Android Studio",
       logo: androidStudioLogo,
-      documentation: "https://developer.android.com/",
     },
     {
       id: 10,
       name: "Expo",
       logo: expoLogo,
-      documentation: "https://docs.expo.dev/",
     },
     {
       id: 11,
       name: "Git",
       logo: gitLogo,
-      documentation: "https://git-scm.com/doc",
     },
     {
       id: 12,
       name: "GitHub",
       logo: githubLogo,
-      documentation: "https://docs.github.com/",
     },
     {
       id: 13,
       name: "Vite",
       logo: viteLogo,
-      documentation: "https://vitejs.dev/guide/",
     },
     {
       id: 14,
       name: "Tailwind CSS",
       logo: tailwindLogo,
-      documentation: "https://tailwindcss.com/docs",
     },
     {
       id: 15,
       name: "Vercel",
       logo: vercelLogo,
-      documentation: "https://vercel.com/docs",
     },
   ];
 
@@ -117,18 +102,16 @@ export const Skills = () => {
         <ul className="flex flex-wrap justify-center gap-4">
           {skills.map((skill) => (
             <li key={skill.id} className="w-[10.9%] relative group">
-              <a href={skill.documentation} target="_blank">
-                <p className="text-[#E9E0D9] bg-primary p-2 rounded-sm text-center transition-opacity duration-300 group-hover:opacity-0">
-                  {skill.name}
-                </p>
-                <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0 group-hover:opacity-100">
-                  <img
-                    src={skill?.logo}
-                    alt={skill.name}
-                    className="max-h-full max-w-full"
-                  />
-                </div>
-              </a>
+              <p className="text-[#E9E0D9] bg-primary p-2 rounded-sm text-center transition-opacity duration-300 group-hover:opacity-0">
+                {skill.name}
+              </p>
+              <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                <img
+                  src={skill?.logo}
+                  alt={skill.name}
+                  className="max-h-full max-w-full"
+                />
+              </div>
             </li>
           ))}
         </ul>
