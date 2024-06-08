@@ -1,7 +1,7 @@
 export const NavMenu = () => {
   return (
     <div className="flex items-center">
-      <ul className="flex gap-10 uppercase text-seconday ">
+      <ul className="flex gap-10 uppercase text-[#E9E0D9] font-bold ">
         <li>
           <a
             href="/"

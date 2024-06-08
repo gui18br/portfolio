@@ -10,7 +10,7 @@ export const Header = () => {
         <h1 className="text-[#85502E] text-5xl">
           Bem-vindo ao meu <strong>portfolio</strong>!
         </h1>
-        <button className="text-white bg-primary transition-all duration-300 hover:bg-transparent hover:backdrop-blur-sm  w-40 h-12 rounded-lg text-2xl">
+        <button className="text-white bg-primary transition-all duration-300 hover:bg-transparent hover:backdrop-blur-sm  w-40 h-12 rounded-md text-2xl">
           Projects
         </button>
       </div>
