@@ -9,7 +9,6 @@ export const Home = () => {
       <div className="flex justify-center">
         <div className="w-[88%]">
           <AboutMe />
-          <h1>Portfolio</h1>
           <ProjectList />
         </div>
       </div>

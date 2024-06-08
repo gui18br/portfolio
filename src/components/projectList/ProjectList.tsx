@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import projects from "../../data/projectsData";
+import { Title } from "../title/Title";
 
 export const ProjectList = () => {
   return (
-    <div>
-      <h1>Projects</h1>
+    <div className="mt-48">
+      <div className="flex justify-center">
+        <Title size="5xl">Projects</Title>
+      </div>
       <ul>
         {projects.map((project) => (
           <li>
