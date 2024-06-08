@@ -19,7 +19,7 @@ export const ProjectList = () => {
               <h1 className="text-3xl">{project.title}</h1>
               <p className="text-lg">{project.description}</p>
               <div className="flex justify-end">
-                <button className="bg-primary text-[#E9E0D9] w-36 h-10 rounded-sm text-xl transition-transform duration-300 transform hover:-translate-y-1">
+                <button className="bg-primary text-[#E9E0D9] w-36 h-10 rounded-md text-xl transition-transform duration-300 transform hover:-translate-y-1">
                   Project
                 </button>
               </div>
