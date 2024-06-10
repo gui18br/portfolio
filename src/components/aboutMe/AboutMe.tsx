@@ -1,6 +1,7 @@
 import { Skills } from "../skills/Skills";
 import { Title } from "../title/Title";
 import { Works } from "../works/Works";
+import skillsData from "../../data/skillsData";
 
 export const AboutMe = () => {
   return (
@@ -24,7 +25,7 @@ export const AboutMe = () => {
         </p>
       </div>
       <Works />
-      <Skills />
+      <Skills skills={skillsData} />
     </div>
   );
 };
