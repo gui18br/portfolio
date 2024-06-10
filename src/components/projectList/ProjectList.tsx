@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import projectsData from "../../data/projectsData";
 import { Title } from "../title/Title";
+import { Element } from "react-scroll";
 
 export const ProjectList = () => {
   const navigate = useNavigate();
@@ -10,9 +11,9 @@ export const ProjectList = () => {
   };
 
   return (
-    <div className="mt-48">
+    <Element name="projetos" className="mt-48">
       <div className="flex justify-center">
-        <Title size="5xl">Projects</Title>
+        <Title size="5xl">Projetos</Title>
       </div>
       <ul className="flex flex-col items-center gap-24 mt-20 w-full">
         {projectsData.map((project) => (
@@ -30,13 +31,13 @@ export const ProjectList = () => {
                   className="bg-primary text-[#E9E0D9] w-36 h-10 rounded-md text-xl transition-transform duration-300 transform hover:-translate-y-1"
                   onClick={() => handleProjectClick(project.id)}
                 >
-                  Project
+                  Detalhes
                 </button>
               </div>
             </div>
           </li>
         ))}
       </ul>
-    </div>
+    </Element>
   );
 };
