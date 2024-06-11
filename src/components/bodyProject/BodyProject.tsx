@@ -1,13 +1,22 @@
+import { Button } from "../button/Button";
 import { Skill } from "../skills/Skills";
 import { SkillsProject } from "../skillsProject/SkillsProject";
 import { Title } from "../title/Title";
 
 interface BodyProjectProps {
   img: string;
+  website: string;
+  github: string;
   skills: Skill[];
 }
 
 export const BodyProject = (props: BodyProjectProps) => {
+  const handleButtonClick = (url: string) => {
+    if (url !== "") {
+      window.open(url, "_blank");
+    }
+  };
+
   return (
     <div className="flex flex-col items-center mt-32 mb-16">
       <div className="w-[88%]">
@@ -44,12 +53,18 @@ export const BodyProject = (props: BodyProjectProps) => {
             <Title size="3xl">Ver projeto</Title>
           </div>
           <div className="flex justify-start gap-10 p-4 mt-5">
-            <button className="bg-primary text-[#E9E0D9] w-36 h-10 rounded-md text-xl transition-transform duration-300 transform hover:-translate-y-1">
-              Website
-            </button>
-            <button className="border-primary border-2 text-primary  w-36 h-10 rounded-md text-xl transition-transform duration-300 transform hover:-translate-y-1">
-              Código
-            </button>
+            <Button
+              style="elevation"
+              onClick={() => handleButtonClick(props.website)}
+            >
+              WebSite
+            </Button>
+            <Button
+              style="border"
+              onClick={() => handleButtonClick(props.github)}
+            >
+              Repositório
+            </Button>
           </div>
         </div>
       </div>

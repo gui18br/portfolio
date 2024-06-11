@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import projectsData from "../../data/projectsData";
 import { Title } from "../title/Title";
 import { Element } from "react-scroll";
+import { Button } from "../button/Button";
 
 export const ProjectList = () => {
   const navigate = useNavigate();
@@ -20,19 +21,19 @@ export const ProjectList = () => {
           <li className="flex items-center gap-44">
             <img
               src={project.img}
-              className="w-[550px] h-[350px] rounded-md shadow-lg transition-transform duration-300 transform hover:-translate-y-1"
+              className="w-[550px] h-[350px] rounded-md shadow-lg transition-transform duration-300 transform"
               alt=""
             />
             <div className="flex flex-col gap-5 w-full">
               <h1 className="text-3xl">{project.title}</h1>
               <p className="text-lg">{project.description}</p>
               <div className="flex justify-end">
-                <button
-                  className="bg-primary text-[#E9E0D9] w-36 h-10 rounded-md text-xl transition-transform duration-300 transform hover:-translate-y-1"
+                <Button
+                  style="elevation"
                   onClick={() => handleProjectClick(project.id)}
                 >
                   Detalhes
-                </button>
+                </Button>
               </div>
             </div>
           </li>
