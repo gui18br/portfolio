@@ -21,7 +21,7 @@ export const ProjectList = () => {
           <li className="flex items-center gap-44">
             <img
               src={project.img}
-              className="w-[550px] h-[350px] rounded-md shadow-lg transition-transform duration-300 transform hover:-translate-y-1"
+              className="w-[550px] h-[350px] rounded-md shadow-lg transition-transform duration-300 transform"
               alt=""
             />
             <div className="flex flex-col gap-5 w-full">

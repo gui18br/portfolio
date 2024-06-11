@@ -1,7 +1,9 @@
 import { NavBar } from "../navBar/NavBar";
-import background from "../../assets/jpeg/background.jpg";
 import { Element, Link } from "react-scroll";
 import { Button } from "../button/Button";
+import background from "../../assets/jpeg/background.jpg";
+import github from "../../assets/icons8-github.svg";
+import linkedin from "../../assets/icons8-linkedin.svg";
 
 export const Header = () => {
   return (
@@ -23,6 +25,17 @@ export const Header = () => {
             Projetos
           </Link>
         </Button>
+      </div>
+      <div className="absolute bottom-28 h-full flex flex-col items-start justify-center gap-2">
+        <a
+          href="https://www.linkedin.com/in/guilherme-novais-b545a21a0/"
+          target="_blank"
+        >
+          <img src={linkedin} alt="" className="w-12 h-12" />
+        </a>
+        <a href="https://github.com/gui18br" target="_blank">
+          <img src={github} alt="" className="w-12 h-12" />
+        </a>
       </div>
     </Element>
   );
