@@ -2,15 +2,61 @@ import { Button } from "../button/Button";
 import { Skill } from "../skills/Skills";
 import { SkillsProject } from "../skillsProject/SkillsProject";
 import { Title } from "../title/Title";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import { useEffect } from "react";
 
 interface BodyProjectProps {
-  img: string;
+  imgs: string[];
+  about: string;
   website: string;
   github: string;
   skills: Skill[];
 }
 
 export const BodyProject = (props: BodyProjectProps) => {
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
+    {
+      loop: true,
+    },
+    [
+      (slider) => {
+        let timeout: ReturnType<typeof setTimeout>;
+        let mouseOver = false;
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            slider.next();
+          }, 2000);
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
+      },
+    ]
+  );
+
+  useEffect(() => {
+    setTimeout(() => {
+      instanceRef.current?.update();
+    }, 1000);
+  }, [instanceRef]);
+
   const handleButtonClick = (url: string) => {
     if (url !== "") {
       window.open(url, "_blank");
@@ -20,12 +66,18 @@ export const BodyProject = (props: BodyProjectProps) => {
   return (
     <div className="flex flex-col items-center mt-32 mb-16">
       <div className="w-[88%]">
-        <div className="flex flex-col justify-center items-center">
-          <img
-            src={props.img}
-            alt=""
-            className="w-[70%] rounded-md shadow-xl"
-          />
+        <div className="flex flex-col justify-center items-center hover:cursor-grab active:cursor-grabbing">
+          <div ref={sliderRef} className="keen-slider ">
+            {props.imgs.map((img) => (
+              <div className="keen-slider__slide flex justify-center">
+                <img
+                  src={img}
+                  alt=""
+                  className="w-[70%] rounded-md shadow-xl"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="w-[50%]">
@@ -33,14 +85,7 @@ export const BodyProject = (props: BodyProjectProps) => {
           <div className="flex flex-col items-start">
             <Title size="3xl">Descrição do Projeto</Title>
           </div>
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            vehicula, libero nec tincidunt tincidunt, nisl nunc rhoncus purus,
-            nec ultricies lectus nunc ut purus. Vestibulum ante ipsum primis in
-            faucibus orci luctus et ultrices posuere cubilia curae; Sed
-            condimentum, libero nec tincidunt tincidunt, nisl nunc rhoncus
-            purus, nec ultricies lectus nunc ut purus.
-          </p>
+          <p className="text-lg text-justify">{props.about}</p>
         </div>
         <div className="mt-10">
           <div className="flex flex-col items-start">
