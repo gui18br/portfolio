@@ -27,7 +27,7 @@ export const Works = () => {
   return (
     <div className="flex flex-col  mt-5">
       <div className="flex items-start">
-        <Title size="3xl">Works</Title>
+        <Title size="3xl">Experiência</Title>
       </div>
       <ul className="flex justify-around mt-5 ml-3">
         {works.map((work) => (

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Input } from "../input/Input";
 import emailjs from "@emailjs/browser";
+import { Button } from "../button/Button";
 
 export const SendEmail = () => {
   const [name, setName] = useState("");
@@ -22,11 +23,15 @@ export const SendEmail = () => {
 
     try {
       await emailjs.send(
-        "service_ne2y8cg",
+        "service_oznsnfm",
         "template_dyrlql8",
         templateParams,
         "raY70rOPVtpvmlfjY"
       );
+      setEmail("");
+      setName("");
+      setMessage("");
+      alert("Email enviado com sucesso");
     } catch (error) {
       console.log("Erro ao enviar email", error);
     }
@@ -53,9 +58,9 @@ export const SendEmail = () => {
         />
       </div>
       <div className="w-full flex justify-end">
-        <button className="bg-primary text-[#E9E0D9] p-2 rounded-md w-36 transition-transform duration-300 transform hover:-translate-y-1">
+        <Button style="elevation" type="submit">
           Enviar
-        </button>
+        </Button>
       </div>
     </form>
   );
