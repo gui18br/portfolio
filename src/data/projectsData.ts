@@ -12,6 +12,8 @@ export interface ProjectData {
   title: string;
   description: string;
   skills: Skill[];
+  website: string;
+  github: string;
   img: string;
 }
 
@@ -28,6 +30,8 @@ const projectsData = [
       { id: 4, name: "Vite", icon: vite },
       { id: 5, name: "Vercel", icon: vercel },
     ],
+    website: "https://empire-burger-brchallenges-beige.vercel.app/",
+    github: "https://github.com/gui18br/empire-burger-brchallenges",
     img: empireProject,
   },
   {
@@ -42,6 +46,8 @@ const projectsData = [
       { id: 4, name: "Vite", icon: vite },
       { id: 5, name: "Vercel", icon: vercel },
     ],
+    website: "",
+    github: "https://github.com/gui18br/portfolio",
     img: portfolioProject,
   },
 ];

@@ -5,10 +5,18 @@ import { Title } from "../title/Title";
 
 interface BodyProjectProps {
   img: string;
+  website: string;
+  github: string;
   skills: Skill[];
 }
 
 export const BodyProject = (props: BodyProjectProps) => {
+  const handleButtonClick = (url: string) => {
+    if (url !== "") {
+      window.open(url, "_blank");
+    }
+  };
+
   return (
     <div className="flex flex-col items-center mt-32 mb-16">
       <div className="w-[88%]">
@@ -45,8 +53,18 @@ export const BodyProject = (props: BodyProjectProps) => {
             <Title size="3xl">Ver projeto</Title>
           </div>
           <div className="flex justify-start gap-10 p-4 mt-5">
-            <Button style="elevation">WebSite</Button>
-            <Button style="border">Repositório</Button>
+            <Button
+              style="elevation"
+              onClick={() => handleButtonClick(props.website)}
+            >
+              WebSite
+            </Button>
+            <Button
+              style="border"
+              onClick={() => handleButtonClick(props.github)}
+            >
+              Repositório
+            </Button>
           </div>
         </div>
       </div>
