@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import projectsData from "../../data/projectsData";
 import { Title } from "../title/Title";
 import { Element } from "react-scroll";
 import { Button } from "../button/Button";
+import projectsData from "../../data/projectsData";
 
 export const ProjectList = () => {
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ export const ProjectList = () => {
         {projectsData.map((project) => (
           <li className="flex items-center gap-44">
             <img
-              src={project.img}
+              src={project.imgs[0]}
               className="w-[550px] h-[350px] rounded-md shadow-lg transition-transform duration-300 transform"
               alt=""
             />

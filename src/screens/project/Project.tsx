@@ -11,18 +11,19 @@ export const Project = () => {
   const [project, setProject] = useState<ProjectData>({
     id: 0,
     description: "",
+    about: "",
     title: "",
     skills: [{ id: 0, name: "", icon: "" }],
     website: "",
     github: "",
-    img: "",
+    imgs: [""],
   });
 
   useEffect(() => {
     const project = projectsData.find(
       (project) => project.id === Number(projectId)
     );
-    if (project !== undefined) {
+    if (project !== null && project !== undefined) {
       setProject(project);
     }
   }, [projectId]);
@@ -30,9 +31,14 @@ export const Project = () => {
   return (
     <div className="flex flex-col bg-[#E9E0D9]">
       <ScrollToTop />
-      <HeaderProject title={project.title} description={project.description} />
+      <HeaderProject
+        title={project.title}
+        description={project.description}
+        website={project.website}
+      />
       <BodyProject
-        img={project.img}
+        imgs={project.imgs}
+        about={project.about}
         skills={project.skills}
         github={project.github}
         website={project.website}
