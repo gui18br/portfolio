@@ -1,8 +1,6 @@
-import { ReactNode } from "react";
-
 interface ButtonProps {
   style: "transparent" | "elevation" | "border";
-  children: string | ReactNode;
+  children: string;
   type?: "button" | "submit" | "reset";
 
   onClick?: () => void;

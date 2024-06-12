@@ -36,7 +36,7 @@ export const MenuBurger = ({ isOpen, onToggle }: MenuBurgerProps) => {
                 offset={item.link !== "contato" ? -130 : -290}
                 smooth={true}
                 duration={500}
-                className="text-[#E9E0D9] hover:font-semibold cursor-pointer"
+                className="text-[#E9E0D9] hover:font-semibold cursor-pointer uppercase"
                 onClick={onToggle}
               >
                 {item.name}
