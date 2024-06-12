@@ -12,38 +12,40 @@ export const NavMenu = () => {
     { name: "Contato", link: "contato" },
   ];
   return (
-    <div className="flex items-center">
-      <ul className="flex gap-10 uppercase text-[#E9E0D9] font-bold ">
-        {currentPath === "/" ? (
-          <>
-            {menuItems.map((item) => (
+    <div className="hidden lg:block">
+      <div className="flex items-center">
+        <ul className="flex gap-10 uppercase text-[#E9E0D9] font-bold ">
+          {currentPath === "/" ? (
+            <>
+              {menuItems.map((item) => (
+                <li>
+                  <Link
+                    key={item.name}
+                    to={item.link}
+                    offset={item.link !== "contato" ? -130 : -30}
+                    smooth={true}
+                    duration={500}
+                    className="hover:text-primary hover:border-b-2 pb-10 border-primary cursor-pointer"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </>
+          ) : (
+            <>
               <li>
-                <Link
-                  key={item.name}
-                  to={item.link}
-                  offset={item.link !== "contato" ? -130 : -30}
-                  smooth={true}
-                  duration={500}
-                  className="hover:text-primary hover:border-b-2 pb-10 border-primary cursor-pointer"
+                <a
+                  href="/"
+                  className="hover:text-primary hover:border-b-2 pb-10 border-primary "
                 >
-                  {item.name}
-                </Link>
+                  Voltar
+                </a>
               </li>
-            ))}
-          </>
-        ) : (
-          <>
-            <li>
-              <a
-                href="/"
-                className="hover:text-primary hover:border-b-2 pb-10 border-primary "
-              >
-                Voltar
-              </a>
-            </li>
-          </>
-        )}
-      </ul>
+            </>
+          )}
+        </ul>
+      </div>
     </div>
   );
 };
