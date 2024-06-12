@@ -29,7 +29,7 @@ export const Works = () => {
       <div className="flex items-start">
         <Title size="3xl">Experiência</Title>
       </div>
-      <ul className="flex justify-around mt-5 ml-3">
+      <ul className="flex lg:flex-row flex-col justify-around lg:mt-5 mt-10 ml-2 lg:gap-0 gap-10 w-[88%]">
         {works.map((work) => (
           <li key={work.id} className="">
             <div className="flex">
@@ -47,7 +47,9 @@ export const Works = () => {
                 </div>
               </div>
             </div>
-            <p className="ml-3 w-[500px]">{work.description}</p>
+            <p className="ml-3 lg:w-[500px] w-[400px] text-justify">
+              {work.description}
+            </p>
           </li>
         ))}
       </ul>
