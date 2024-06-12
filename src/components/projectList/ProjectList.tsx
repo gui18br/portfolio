@@ -12,13 +12,13 @@ export const ProjectList = () => {
   };
 
   return (
-    <Element name="projetos" className="mt-48">
+    <Element name="projetos" className="mt-40">
       <div className="flex justify-center">
         <Title size="5xl">Projetos</Title>
       </div>
       <ul className="flex flex-col items-center gap-24 mt-20 w-full">
         {projectsData.map((project) => (
-          <li className="flex items-center gap-44">
+          <li className="flex flex-col items-center lg:gap-44 gap-16">
             <img
               src={project.imgs[0]}
               className="w-[550px] h-[350px] rounded-md shadow-lg transition-transform duration-300 transform"

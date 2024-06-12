@@ -27,21 +27,21 @@ export const MenuBurger = ({ isOpen, onToggle }: MenuBurgerProps) => {
       >
         <ul className="overflow-hidden flex flex-col items-center bg-primary rounded-md h-64 justify-center gap-5 mb-2">
           {menuItems.map((item) => (
-            <li
-              key={item.name}
-              className="border-b-2 border-[#E9E0D9] w-[77%] pb-2 flex justify-center"
+            <Link
+              to={item.link}
+              offset={item.link !== "contato" ? -130 : -290}
+              smooth={true}
+              duration={500}
+              className="text-[#E9E0D9] cursor-pointer uppercase w-[77%]"
+              onClick={onToggle}
             >
-              <Link
-                to={item.link}
-                offset={item.link !== "contato" ? -130 : -290}
-                smooth={true}
-                duration={500}
-                className="text-[#E9E0D9] hover:font-semibold cursor-pointer uppercase"
-                onClick={onToggle}
+              <li
+                key={item.name}
+                className=" hover:bg-[#6e41277c] p-2 transition-colors rounded-md duration-300 flex justify-center"
               >
                 {item.name}
-              </Link>
-            </li>
+              </li>
+            </Link>
           ))}
         </ul>
       </Transition>

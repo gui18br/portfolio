@@ -12,7 +12,7 @@ export const NavMenu = () => {
     { name: "Contato", link: "contato" },
   ];
   return (
-    <div className="hidden lg:block">
+    <div className={`${currentPath === "/" ? "hidden lg:block" : "block"} `}>
       <div className="flex items-center">
         <ul className="flex gap-10 uppercase text-[#E9E0D9] font-bold ">
           {currentPath === "/" ? (

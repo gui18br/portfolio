@@ -47,7 +47,7 @@ export const Works = () => {
                 </div>
               </div>
             </div>
-            <p className="ml-3 lg:w-[400px] sm:w-[500px] w-[400px] xl:w-[500px] text-justify">
+            <p className="lg:w-[400px] sm:w-[500px] w-[300px] xl:w-[500px] text-justify">
               {work.description}
             </p>
           </li>

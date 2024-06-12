@@ -50,7 +50,7 @@ export const SendEmail = () => {
         <p>Mensagem</p>
         <textarea
           title="Mensagem"
-          className="rounded-md p-2 w-[700px] h-64"
+          className="rounded-md p-2 lg:w-[700px] w-[300px] lg:h-64 h-32"
           value={message}
           onChange={(event) => {
             setMessage(event.target.value);
