@@ -18,7 +18,7 @@ export const Input = (props: InputProps) => {
         type={props.type}
         value={props.value}
         onChange={handleInputChange}
-        className={`rounded-md p-2 flex items-center justify-center w-[300px] lg:w-[700px] h-12`}
+        className={`rounded-md p-2 flex items-center justify-center w-[300px] lg:w-[600px] h-12`}
       />
     </div>
   );
