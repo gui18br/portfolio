@@ -22,7 +22,7 @@ export const NavMenu = () => {
                   <Link
                     key={item.name}
                     to={item.link}
-                    offset={item.link !== "contato" ? -130 : -30}
+                    offset={item.link !== "contato" ? -130 : -90}
                     smooth={true}
                     duration={500}
                     className="hover:text-primary hover:border-b-2 pb-10 border-primary cursor-pointer"

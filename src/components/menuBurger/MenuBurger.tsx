@@ -29,7 +29,7 @@ export const MenuBurger = ({ isOpen, onToggle }: MenuBurgerProps) => {
           {menuItems.map((item) => (
             <Link
               to={item.link}
-              offset={item.link !== "contato" ? -130 : -290}
+              offset={item.link !== "contato" ? -145 : -90}
               smooth={true}
               duration={500}
               className="text-[#E9E0D9] cursor-pointer uppercase w-[77%]"
