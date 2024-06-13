@@ -1,6 +1,5 @@
 import { Button } from "../button/Button";
 import { Skill, Skills } from "../skills/Skills";
-import { SkillsProject } from "../skillsProject/SkillsProject";
 import { Title } from "../title/Title";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
