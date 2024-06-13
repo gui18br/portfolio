@@ -1,5 +1,5 @@
 import { Button } from "../button/Button";
-import { Skill } from "../skills/Skills";
+import { Skill, Skills } from "../skills/Skills";
 import { SkillsProject } from "../skillsProject/SkillsProject";
 import { Title } from "../title/Title";
 import { useKeenSlider } from "keen-slider/react";
@@ -67,20 +67,20 @@ export const BodyProject = (props: BodyProjectProps) => {
     <div className="flex flex-col items-center mt-32 mb-16">
       <div className="w-[88%]">
         <div className="flex flex-col justify-center items-center hover:cursor-grab active:cursor-grabbing">
-          <div ref={sliderRef} className="keen-slider ">
+          <div ref={sliderRef} className="keen-slider">
             {props.imgs.map((img) => (
               <div className="keen-slider__slide flex justify-center">
                 <img
                   src={img}
                   alt=""
-                  className="w-[70%] rounded-md shadow-xl"
+                  className="sm:w-[70%] rounded-md shadow-xl"
                 />
               </div>
             ))}
           </div>
         </div>
       </div>
-      <div className="w-[50%]">
+      <div className="sm:w-[50%] w-[90%]">
         <div className="flex flex-col mt-24 gap-8">
           <div className="flex flex-col items-start">
             <Title size="3xl">Descrição do Projeto</Title>
@@ -91,7 +91,7 @@ export const BodyProject = (props: BodyProjectProps) => {
           <div className="flex flex-col items-start">
             <Title size="3xl">Tecnologias utilizadas</Title>
           </div>
-          <SkillsProject skills={props.skills} />
+          <Skills skills={props.skills} />
         </div>
         <div className="mt-10">
           <div className="flex flex-col items-start">

@@ -29,7 +29,7 @@ export const Project = () => {
   }, [projectId]);
 
   return (
-    <div className="flex flex-col bg-[#E9E0D9]">
+    <div className="flex flex-col bg-300">
       <ScrollToTop />
       <HeaderProject
         title={project.title}

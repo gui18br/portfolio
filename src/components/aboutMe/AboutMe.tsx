@@ -27,7 +27,12 @@ export const AboutMe = () => {
           </p>
         </div>
         <Works />
-        <Skills skills={skillsData} />
+        <div>
+          <div className="flex items-center justify-center mt-10">
+            <Title size="3xl">Skills</Title>
+          </div>
+          <Skills skills={skillsData} />
+        </div>
       </Element>
     </div>
   );

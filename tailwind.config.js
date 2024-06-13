@@ -9,6 +9,7 @@ export default {
       colors: {
         primary: "#85502E",
         seconday: "#2A211D",
+        300: "#E9E0D9",
         semiTransparent: "#854f2e38",
       },
     },
