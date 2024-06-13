@@ -39,7 +39,7 @@ export const Header = () => {
           Projetos
         </Button>
       </div>
-      <div className="absolute sm:bottom-16 xl:bottom-28 bottom-56 h-full flex flex-col items-start justify-center gap-2">
+      <div className="absolute sm:bottom-16 xl:bottom-28 bottom-40 h-full flex flex-col items-start justify-center gap-2">
         <a
           href="https://www.linkedin.com/in/guilherme-novais-b545a21a0/"
           target="_blank"

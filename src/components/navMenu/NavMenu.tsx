@@ -37,7 +37,7 @@ export const NavMenu = () => {
               <li>
                 <a
                   href="/"
-                  className="hover:text-primary hover:border-b-2 pb-10 border-primary "
+                  className="hover:text-primary hover:border-b-2 pb-10 ml-2 border-primary "
                 >
                   Voltar
                 </a>

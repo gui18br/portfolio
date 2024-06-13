@@ -19,8 +19,12 @@ export const NavBar = () => {
       <div className="w-[88%]">
         <div className="flex justify-between items-center pt-3 pb-3">
           <a href="/" className="flex items-center gap-5">
-            <img src={avatar} alt="" className="w-20 h-20 rounded-full" />
-            <h1 className="uppercase italic text-xl text-[#E9E0D9] ">
+            <img
+              src={avatar}
+              alt=""
+              className="sm:w-20 sm:h-20 w-16 h-16 rounded-full"
+            />
+            <h1 className="uppercase italic sm:text-xl text-[#E9E0D9] ">
               Guilherme Novais
             </h1>
           </a>
