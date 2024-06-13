@@ -38,7 +38,10 @@ export const SendEmail = () => {
   };
 
   return (
-    <form className="flex flex-col gap-5" onSubmit={handleSendEmail}>
+    <form
+      className="flex flex-col sm:gap-5 lg:gap-3 gap-3 p-1"
+      onSubmit={handleSendEmail}
+    >
       <Input title="Nome" type="text" onInputChange={setName} value={name} />
       <Input
         title="Email"
@@ -50,7 +53,7 @@ export const SendEmail = () => {
         <p>Mensagem</p>
         <textarea
           title="Mensagem"
-          className="rounded-md p-2 lg:w-[700px] w-[300px] sm:h-16 lg:h-64 h-32"
+          className="rounded-md p-2 lg:w-[600px] w-[300px] sm:h-28 lg:h-32 h-32"
           value={message}
           onChange={(event) => {
             setMessage(event.target.value);
