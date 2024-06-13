@@ -14,7 +14,7 @@ export const NavMenu = () => {
   return (
     <div className={`${currentPath === "/" ? "hidden lg:block" : "block"} `}>
       <div className="flex items-center">
-        <ul className="flex gap-10 uppercase text-[#E9E0D9] font-bold ">
+        <ul className="flex gap-10 uppercase text-300 font-bold ">
           {currentPath === "/" ? (
             <>
               {menuItems.map((item) => (

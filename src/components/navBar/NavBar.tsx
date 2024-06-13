@@ -24,7 +24,7 @@ export const NavBar = () => {
               alt=""
               className="sm:w-20 sm:h-20 w-16 h-16 rounded-full"
             />
-            <h1 className="uppercase italic sm:text-xl text-[#E9E0D9] ">
+            <h1 className="uppercase italic sm:text-xl text-300 ">
               Guilherme Novais
             </h1>
           </a>

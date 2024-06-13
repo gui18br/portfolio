@@ -20,7 +20,7 @@ export const HeaderProject = (props: HeaderProjectProps) => {
       <NavBar />
       <img
         src={background}
-        className="w-full shadow-sm hidden sm:blocl"
+        className="w-full shadow-sm hidden sm:block"
         alt=""
       />
       <img

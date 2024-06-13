@@ -18,7 +18,7 @@ export const Skills = (props: SkillsProps) => {
       >
         {props.skills.map((skill) => (
           <li key={skill.id} className="relative group">
-            <p className="text-[#E9E0D9] bg-primary p-2 rounded-sm text-center transition-opacity duration-500 group-hover:opacity-0 shadow-md">
+            <p className="text-300 bg-primary p-2 rounded-sm text-center transition-opacity duration-500 group-hover:opacity-0 shadow-md">
               {skill.name}
             </p>
             <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0 group-hover:opacity-100">
