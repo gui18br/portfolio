@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+<h1>
+    <p>EMPIRE BURGER</p>
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🧑‍💻 Preview
 
-Currently, two official plugins are available:
+<p align="center">
+    <img src="https://github.com/gui18br/portfolio/blob/main/src/assets/png/empire-burger-project.png?raw=true" width="700" height="400"  />
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 About
 
-## Expanding the ESLint configuration
+O Empire Burger é um projeto de landing page para uma lanchonete especializada em hambúrgueres. Esse projeto foi baseado no desafio proposto pela plataforma <a href="https://www.brchallenges.com/" target="_blank">BRChallenges</a>, que oferece desafios para desenvolvedores aperfeiçoarem suas habilidades e exporem seus trabalhos. O desenvolvimento foi realizado utilizando as tecnologias **React**, **TypeScript**, **TailwindCSS**, **Vite** e **Vercel**, além do **consumo de APIs** fornecidas. O código foi criado de forma autoral, baseando-se no design proposto através da plataforma Figma.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## 👷‍♂️ Installation Instructions
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Para instalar as dependências, utilize este comando:
+
+```bash
+yarn install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 🚀 Usage
+
+Para iniciar o projeto, utilize o comando:
+
+```bash
+yarn run dev
+```
+
+## 🔨 Tools
+
+- [TypeScript](https://www.typescriptlang.org/docs/)
+- [React](https://react.dev/)
+- [TailwindCSS](https://tailwindcss.com/docs/installation)
+- [Axios](https://axios-http.com/docs/intro)
+- [Vite](https://vitejs.dev/guide/)
+- [Vercel](https://vercel.com/)
+
+## 🌐 Live Demo
+
+Veja a demonstração ao vivo [aqui](https://empire-burger-brchallenges-guilherme-novais.vercel.app/)
+
