@@ -20,16 +20,16 @@ export const Header = () => {
       <NavBar />
       <img
         src={background}
-        className="w-full shadow-sm hidden sm:block"
+        className="w-full shadow-sm hidden lg:block xl:h-[750px]"
         alt=""
       />
       <img
         src={backgroundMobile}
-        className="w-full shadow-sm sm:hidden block"
+        className="shadow-sm lg:hidden block sm:h-[900px] sm:w-full "
         alt=""
       />
-      <div className="absolute sm:bottom-16 lg:bottom-20 xl:bottom-28 bottom-6 left-0 w-full h-full flex flex-col items-center justify-center sm:gap-5 lg:gap-10 gap-10">
-        <h1 className="text-[#85502E] text-center sm:text-2xl lg:text-start lg:text-5xl text-3xl">
+      <div className="absolute sm:bottom-8 lg:bottom-[85px] bottom-6 left-0 w-full h-full flex flex-col items-center justify-center sm:gap-5 lg:gap-10 gap-10">
+        <h1 className="text-[#85502E] text-center sm:text-3xl lg:text-start lg:text-5xl text-3xl">
           <span className="">
             Bem-vindo ao meu <strong>portfolio</strong>!
           </span>
@@ -39,7 +39,7 @@ export const Header = () => {
           Projetos
         </Button>
       </div>
-      <div className="absolute sm:bottom-16 xl:bottom-28 bottom-40 h-full flex flex-col items-start justify-center gap-2">
+      <div className="absolute sm:bottom-48 lg:bottom-24 xl:bottom-28 bottom-40 h-full flex flex-col items-start justify-center gap-2">
         <a
           href="https://www.linkedin.com/in/guilherme-novais-b545a21a0/"
           target="_blank"
