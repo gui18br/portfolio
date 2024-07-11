@@ -7,10 +7,10 @@ export default {
         sans: ["Josefin Sans", "sans-serif"],
       },
       colors: {
-        primary: "#85502E",
+        primary: "#914D1E",
         seconday: "#2A211D",
         300: "#E9E0D9",
-        semiTransparent: "#854f2e38",
+        semiTransparent: "#a6552654",
       },
     },
   },

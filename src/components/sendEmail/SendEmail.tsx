@@ -7,6 +7,7 @@ export const SendEmail = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,16 +23,23 @@ export const SendEmail = () => {
     };
 
     try {
-      await emailjs.send(
-        "service_oznsnfm",
-        "template_dyrlql8",
-        templateParams,
-        "raY70rOPVtpvmlfjY"
-      );
-      setEmail("");
-      setName("");
-      setMessage("");
-      alert("Email enviado com sucesso");
+      if (name !== "" || email !== "" || message !== "") {
+        setLoading(true);
+        await emailjs.send(
+          "service_oznsnfm",
+          "template_dyrlql8",
+          templateParams,
+          "raY70rOPVtpvmlfjY"
+        );
+        setEmail("");
+        setName("");
+        setMessage("");
+        alert("Email enviado com sucesso");
+        setLoading(false);
+      } else {
+        alert("Preencha todos os campos!");
+        return;
+      }
     } catch (error) {
       console.log("Erro ao enviar email", error);
     }
@@ -61,7 +69,7 @@ export const SendEmail = () => {
         />
       </div>
       <div className="w-full flex justify-end">
-        <Button style="elevation" type="submit">
+        <Button style="elevation" type="submit" disabled={loading}>
           Enviar
         </Button>
       </div>
