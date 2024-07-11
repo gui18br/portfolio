@@ -26,10 +26,10 @@ export const Works = () => {
 
   return (
     <div className="flex flex-col  mt-5">
-      <div className="flex lg:justify-start sm:justify-center justify-start">
+      <div className="flex lg:justify-start justify-center">
         <Title size="3xl">Experiência</Title>
       </div>
-      <ul className="flex lg:flex-row flex-col justify-around items-center lg:mt-5 mt-10 ml-2 lg:gap-0 gap-10">
+      <ul className="flex flex-col justify-around items-center lg:items-start lg:ml-5 lg:mt-5 mt-10 ml-2 gap-10">
         {works.map((work) => (
           <li key={work.id} className="">
             <div className="flex">

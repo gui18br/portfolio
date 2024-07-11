@@ -13,7 +13,7 @@ export const Skills = (props: SkillsProps) => {
     <div className="flex flex-col items-center justify-center mt-10">
       <ul
         className={`grid grid-cols-2 md:grid-cols-3 ${
-          props.skills.length > 5 ? "lg:grid-cols-7" : "lg:grid-cols-5"
+          props.skills.length > 5 ? "lg:grid-cols-4" : "lg:grid-cols-5"
         } gap-5 justify-center`}
       >
         {props.skills.map((skill) => (

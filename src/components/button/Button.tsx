@@ -2,6 +2,7 @@ interface ButtonProps {
   style: "transparent" | "elevation" | "border";
   children: string;
   type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 
   onClick?: () => void;
 }
@@ -18,6 +19,7 @@ export const Button = (props: ButtonProps) => {
       }`}
       type={props.type || "button"}
       onClick={props.onClick}
+      disabled={props.disabled}
     >
       {props.children}
     </button>
