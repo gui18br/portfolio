@@ -26,12 +26,14 @@ export const AboutMe = () => {
             âmbito.
           </p>
         </div>
-        <Works />
-        <div>
-          <div className="flex items-center justify-center mt-10">
-            <Title size="3xl">Skills</Title>
+        <div className="lg:flex lg:justify-between lg:gap-10 xl:gap-0">
+          <Works />
+          <div>
+            <div className="flex items-center justify-center mt-10">
+              <Title size="3xl">Skills</Title>
+            </div>
+            <Skills skills={skillsData} />
           </div>
-          <Skills skills={skillsData} />
         </div>
       </Element>
     </div>
