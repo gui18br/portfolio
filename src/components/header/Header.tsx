@@ -10,7 +10,7 @@ export const Header = () => {
     scroller.scrollTo("projetos", {
       duration: 500,
       smooth: true,
-      offset: -130,
+      offset: -35,
     });
   };
 
@@ -18,13 +18,17 @@ export const Header = () => {
     <Element name="home" className="relative">
       <NavBar />
       <img src={background} className="w-full shadow-sm h-screen" alt="" />
-      <div className="absolute sm:bottom-8 lg:bottom-0 bottom-6 left-0 w-full h-full flex flex-col items-center justify-center sm:gap-5 lg:gap-10 gap-10">
+      <div className="absolute sm:bottom-8 lg:bottom-0 bottom-0 top-10 left-0 w-full h-full flex flex-col items-center justify-center sm:gap-5 gap-3">
         <h1 className="text-300 text-center sm:text-3xl lg:text-start lg:text-5xl text-3xl">
           <span className="">
-            Bem-vindo ao meu <strong>portfolio</strong>!
+            Desenvolvedor Mobile / Web <strong>Full</strong>stack
           </span>
           <span className="hidden ">Bem-vindo!</span>
         </h1>
+        <p className="text-300 text-lg xl:w-[90%] w-[60%] text-center">
+          Bem-vindo ao meu <strong>portfólio</strong>, aqui você encontrará meus
+          projetos e conhecerá sobre mim.
+        </p>
         <Button style="transparent" onClick={handleClick}>
           Projetos
         </Button>

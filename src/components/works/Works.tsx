@@ -1,37 +1,110 @@
 import { Title } from "../title/Title";
 import vcaLogo from "../../assets/jpeg/vca-sistemas.jpeg";
 import compassLogo from "../../assets/jpeg/compass_uol_logo.jpeg";
+import sgiLogo from "../../assets/png/logo_sgi_70.png";
+import { useKeenSlider } from "keen-slider/react";
+import { useEffect, useState } from "react";
+
+const works = [
+  {
+    id: 1,
+    logo: sgiLogo,
+    link: "https://app.sgidesigner.com.br/",
+    title: "SGI Solution",
+    date: "07/2024 - Atual",
+    description:
+      "Atuo como desenvolvedor mobile Fullstack, utilizando Dart com Flutter para aplicações Android e PHP com Laravel no backend para criação de APIs que integram bancos de dados SQL. Além disso, sou responsável por manter e implementar funcionalidades em módulos específicos de sistemas baseados em Laravel.",
+  },
+  {
+    id: 2,
+    logo: vcaLogo,
+    link: "",
+    title: "VCA Sistemas",
+    date: "03/2024 - 05/2024",
+    description:
+      "Um dos meus principais projetos foi ser responsável por dar manutenção e adicionar funcionalidades a uma aplicação de moto frentista legada em React Native e NestJS. O aplicativo se utilizava de componentes de classes e apresentava grande lentidão no seu uso no dia a dia. Dando a manutenção devida, refatorei trechos do código e adicionei funcionalidades tanto no APP quanto no backend, com isso recebi importantes feedbacks de melhoria no desempenho do mesmo pelos clientes.",
+  },
+  {
+    id: 3,
+    logo: compassLogo,
+    link: "https://compass.uol/",
+    title: "Compass UOL",
+    date: "07/2023 - 12/2023",
+    description:
+      "Atuei como estagiário no Programa de Bolsas fornecido pela empresa. Neste programa fui responsável por estudar diversas tecnologias e as pôr em prática através de provas e desafios tanto individuais quanto em grupos. Tais tecnologias estudas foram GIT, JavaScript, TypeScript, HTML, CSS, React, React Native e o sistema AWS. Além disso apliquei e pus em prática metologias ágeis como Agile, Scrum e Kanban.",
+  },
+];
 
 export const Works = () => {
-  const works = [
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const [ref, instanceRef] = useKeenSlider<HTMLDivElement>(
     {
-      id: 1,
-      logo: vcaLogo,
-      link: "https://vcasistemas.com.br/",
-      title: "VCA Sistemas",
-      date: "03/2024 - 05/2024",
-      description:
-        "Atuei como desenvolvedor de software júnior, sendo responsável por desenvolver aplicações tanto web quanto mobile, além de dar manutenção em códigos baseados em TypeScript e JavaScript que utilizavam de bibliotecas React e/ou React Native.",
+      initial: 0,
+      slides: {
+        perView: 2,
+      },
+      breakpoints: {
+        "(max-width: 1020px)": {
+          slides: {
+            perView: 1,
+          },
+        },
+      },
+      loop: true,
+      slideChanged(slider) {
+        setCurrentSlide(slider.track.details.rel);
+      },
+      created() {
+        setLoaded(true);
+      },
     },
-    {
-      id: 2,
-      logo: compassLogo,
-      link: "https://compass.uol/",
-      title: "Compass UOL",
-      date: "07/2023 - 12/2023",
-      description:
-        "Durante meu estágio no programa de bolsas da Compass UOL, fui responsável por estudar tecnologias, linguagens de programação e bibliotecas. Através de ferramentas como TypeScript e React Native, participei de projetos mobile e web, tanto individuais quanto em grupo, aplicando metodologias ágeis como Agile e Scrum.",
-    },
-  ];
+    [
+      (slider) => {
+        let timeout: ReturnType<typeof setTimeout>;
+        let mouseOver = false;
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            slider.next();
+          }, 2000);
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
+      },
+    ]
+  );
+
+  useEffect(() => {
+    setTimeout(() => {
+      instanceRef.current?.update();
+    }, 1000);
+  }, [instanceRef]);
 
   return (
-    <div className="flex flex-col  mt-5">
-      <div className="flex lg:justify-start justify-center">
+    <div className="mt-10">
+      <div className="flex lg:justify-start justify-center mb-10">
         <Title size="3xl">Experiência</Title>
       </div>
-      <ul className="flex flex-col justify-around items-center lg:items-start lg:ml-5 lg:mt-5 mt-10 ml-2 gap-10">
+      <div ref={ref} className="keen-slider cursor-grab">
         {works.map((work) => (
-          <li key={work.id} className="">
+          <div key={work.id} className="keen-slider__slide">
             <div className="flex">
               <div className="mb-3">
                 <div className="flex items-center gap-2">
@@ -47,12 +120,29 @@ export const Works = () => {
                 </div>
               </div>
             </div>
-            <p className="lg:w-[400px] sm:w-[500px] w-[300px] xl:w-[500px] text-justify">
+            <p className="text-justify ml-2 xl:w-[550px] lg:w-[450px]">
               {work.description}
             </p>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
+      {loaded && instanceRef.current && (
+        <div className="flex p-10 pb-24 justify-center">
+          {[
+            ...Array(instanceRef.current.track.details.slides.length).keys(),
+          ].map((idx) => {
+            return (
+              <button
+                key={idx}
+                onClick={() => {
+                  instanceRef.current?.moveToIdx(idx);
+                }}
+                className={"dot" + (currentSlide === idx ? " active" : "")}
+              ></button>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };

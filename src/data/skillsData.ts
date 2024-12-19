@@ -12,8 +12,15 @@ import githubLogo from "../assets/icons8-github.svg";
 import viteLogo from "../assets/icons8-rapidamente.svg";
 import tailwindLogo from "../assets/icons8-tailwindcss.svg";
 import vercelLogo from "../assets/vercel-svgrepo-com.svg";
+import flutterLogo from "../assets/flutterio-icon.svg";
+import laravelLogo from "../assets/laravel-svgrepo-com.svg";
+import dartLogo from "../assets/dartlang-icon.svg";
+import phpLogo from "../assets/php2-svgrepo-com.svg";
+import sqlLogo from "../assets/sql-database-generic-svgrepo-com.svg";
+import jqueryLogo from "../assets/jquery-ar21.svg";
 
 const skillsData = [
+  // Linguagens de Programação
   {
     id: 1,
     name: "JavaScript",
@@ -41,51 +48,85 @@ const skillsData = [
   },
   {
     id: 6,
+    name: "Dart",
+    icon: dartLogo,
+  },
+  {
+    id: 7,
+    name: "PHP",
+    icon: phpLogo,
+  },
+  {
+    id: 8,
+    name: "SQL",
+    icon: sqlLogo,
+  },
+
+  // Frameworks e Bibliotecas
+  {
+    id: 9,
     name: "React",
     icon: reactLogo,
   },
   {
-    id: 7,
+    id: 10,
     name: "React Native",
     icon: reactLogo,
   },
   {
-    id: 8,
+    id: 11,
     name: "Node.js",
     icon: nodeLogo,
   },
   {
-    id: 9,
-    name: "Android Studio",
-    icon: androidStudioLogo,
-  },
-  {
-    id: 10,
+    id: 12,
     name: "Expo",
     icon: expoLogo,
   },
   {
-    id: 11,
-    name: "Git",
-    icon: gitLogo,
-  },
-  {
-    id: 12,
-    name: "GitHub",
-    icon: githubLogo,
-  },
-  {
     id: 13,
-    name: "Vite",
-    icon: viteLogo,
+    name: "Flutter",
+    icon: flutterLogo,
   },
   {
     id: 14,
+    name: "Laravel",
+    icon: laravelLogo,
+  },
+  {
+    id: 15,
+    name: "jQuery",
+    icon: jqueryLogo,
+  },
+  {
+    id: 16,
     name: "Tailwind CSS",
     icon: tailwindLogo,
   },
   {
-    id: 15,
+    id: 17,
+    name: "Vite",
+    icon: viteLogo,
+  },
+
+  // Ferramentas e Plataformas
+  {
+    id: 18,
+    name: "Android Studio",
+    icon: androidStudioLogo,
+  },
+  {
+    id: 19,
+    name: "Git",
+    icon: gitLogo,
+  },
+  {
+    id: 20,
+    name: "GitHub",
+    icon: githubLogo,
+  },
+  {
+    id: 21,
     name: "Vercel",
     icon: vercelLogo,
   },

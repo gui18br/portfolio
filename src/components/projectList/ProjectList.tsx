@@ -12,7 +12,7 @@ export const ProjectList = () => {
   };
 
   return (
-    <Element name="projetos" className="mt-40">
+    <Element name="projetos" className="pt-24">
       <div className="flex justify-center">
         <Title size="5xl">Projetos</Title>
       </div>

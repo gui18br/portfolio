@@ -8,34 +8,35 @@ export const AboutMe = () => {
   return (
     <div>
       <Element name="sobre" className="flex flex-col justify-center mt-10">
-        <div className="flex flex-col items-center">
-          <Title size="5xl">Sobre mim</Title>
-          <p className="mt-5 text-justify">
-            Sou aluno do curso de Bacharel em Sistemas de Informações no
-            Instituto Federal de Educação, Ciência e Tecnologia da Bahia - IFBA.
-            Minha carreira na área de desenvolvimento começou como estagiário na
-            Compass UOL. Nessa posição, pude evoluir e demonstrar habilidades
-            como proatividade e tomada de responsabilidade. Além disso, aprendi
-            sobre metodologias ágeis e Scrum, e tive a oportunidade de estudar e
-            praticar tecnologias que apliquei através de projetos individuais e
-            em grupo. Posteriormente, desempenhei a função de desenvolvedor de
-            software Júnior em uma empresa da minha cidade, atuando em funções
-            diversas como front-end e back-end no desenvolvimento de sites e
-            aplicativos mobile. Meu objetivo profissional é consolidar minha
-            carreira na área de tecnologia e desenvolver ideias próprias nesse
-            âmbito.
-          </p>
-        </div>
-        <div className="lg:flex lg:justify-between lg:gap-10 xl:gap-0">
-          <Works />
+        <div className="flex lg:flex-row flex-col  justify-between">
+          <div className="flex flex-col items-center sm:mr-10 mb-10 lg:mb-0 ">
+            <Title size="5xl">Sobre mim</Title>
+            <p className="mt-5 text-justify sm:w-[500px]">
+              Olá, me chamo Guilherme Novais e sou um desenvolvedor FullStack.
+              Como estudante do curso de Bacharelado em Sistemas de Informação
+              no Instituto Federal de Educação, Ciência e Tecnologia da Bahia
+              (IFBA), venho desenvolvendo habilidades na área de tecnologia há
+              cerca de 3 anos. Durante esse período, trabalhei com tecnologias
+              como JavaScript, TypeScript, Dart, PHP, React, React Native,
+              Flutter, Laravel e SQL, além de possuir conhecimento em Java.
+              Minha experiência abrange o desenvolvimento de aplicações tanto
+              web quanto mobile, a implementação de novas funcionalidades a
+              projetos existentes, e a manutenção de código legado para
+              aprimorar desempenho e usabilidade.
+            </p>
+          </div>
           <div>
-            <div className="flex items-center justify-center mt-10">
+            <div className="flex items-center justify-center">
               <Title size="3xl">Skills</Title>
             </div>
             <Skills skills={skillsData} />
           </div>
         </div>
+        <div className="">
+          <Works />
+        </div>
       </Element>
+      <hr className="bg-[#914e1e29] h-[2px] w-full" />
     </div>
   );
 };
