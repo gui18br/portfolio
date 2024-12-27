@@ -18,6 +18,8 @@ import dartLogo from "../assets/dartlang-icon.svg";
 import phpLogo from "../assets/php2-svgrepo-com.svg";
 import sqlLogo from "../assets/sql-database-generic-svgrepo-com.svg";
 import jqueryLogo from "../assets/jquery-ar21.svg";
+import nestjsLogo from "../assets/icons8-carregou.svg";
+import postgresLogo from "../assets/icons8-postgreesql.svg";
 
 const skillsData = [
   // Linguagens de Programação
@@ -108,25 +110,35 @@ const skillsData = [
     name: "Vite",
     icon: viteLogo,
   },
+  {
+    id: 18,
+    name: "NestJS",
+    icon: nestjsLogo,
+  },
 
   // Ferramentas e Plataformas
   {
-    id: 18,
+    id: 19,
+    name: "PostgreSQL",
+    icon: postgresLogo,
+  },
+  {
+    id: 20,
     name: "Android Studio",
     icon: androidStudioLogo,
   },
   {
-    id: 19,
+    id: 21,
     name: "Git",
     icon: gitLogo,
   },
   {
-    id: 20,
+    id: 22,
     name: "GitHub",
     icon: githubLogo,
   },
   {
-    id: 21,
+    id: 23,
     name: "Vercel",
     icon: vercelLogo,
   },
