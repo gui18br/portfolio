@@ -11,6 +11,9 @@ import flutter from "../assets/flutterio-icon.svg";
 import dart from "../assets/dartlang-icon.svg";
 import nestJs from "../assets/icons8-carregou.svg";
 import postgress from "../assets/icons8-postgreesql.svg";
+import laravel from "../assets/laravel-svgrepo-com.svg";
+import sql from "../assets/sql-database-generic-svgrepo-com.svg";
+import php from "../assets/php2-svgrepo-com.svg";
 
 import sgiComanda1 from "../assets/jpeg/sgi-comanda/sgiComanda1.jpg";
 import sgiComanda2 from "../assets/jpeg/sgi-comanda/sgiComanda2.jpg";
@@ -27,6 +30,14 @@ import eficiente3 from "../assets/jpeg/eficiente-ms/eficiente-3.jpeg";
 import eficiente4 from "../assets/jpeg/eficiente-ms/eficiente-4.jpeg";
 import eficiente5 from "../assets/jpeg/eficiente-ms/eficiente-5.jpeg";
 
+import relatorio1 from "../assets/png/relatorios/1.png";
+import relatorio2 from "../assets/png/relatorios/2.png";
+import relatorio3 from "../assets/png/relatorios/3.png";
+import relatorio4 from "../assets/png/relatorios/4.png";
+import relatorio5 from "../assets/png/relatorios/5.png";
+import relatorio6 from "../assets/png/relatorios/6.png";
+import relatorio7 from "../assets/png/relatorios/7.png";
+
 export interface ProjectData {
   id: number;
   title: string;
@@ -41,6 +52,33 @@ export interface ProjectData {
 const projectsData = [
   {
     id: 1,
+    title: "SGI Relatório",
+    description:
+      "Aplicativo desenvolvido para criação e controle de relatórios.",
+    about:
+      "O aplicativo de relatórios foi desenvolvido para dinamizar e automatizar a criação de relatórios, substituindo o processo manual anteriormente realizado pelos funcionários, que precisavam inseri-los individualmente no sistema. Com o APP, os próprios funcionários passaram a emitir seus relatórios diretamente na plataforma, garantindo o registro detalhado de cada adição. Isso trouxe mais agilidade aos processos da empresa e melhorou o fluxo de trabalho da equipe. A solução foi desenvolvida com Laravel no backend, utilizando SQL para consultas, e Flutter para a versão mobile.",
+    skills: [
+      { id: 1, name: "Flutter", icon: flutter },
+      { id: 2, name: "Dart", icon: dart },
+      { id: 3, name: "PHP", icon: php },
+      { id: 4, name: "Laravel", icon: laravel },
+      { id: 5, name: "SQL", icon: sql },
+    ],
+    website:
+      "https://play.google.com/store/apps/details?id=br.com.sgi&hl=pt_BR",
+    github: "",
+    imgs: [
+      relatorio7,
+      relatorio1,
+      relatorio2,
+      relatorio3,
+      relatorio4,
+      relatorio5,
+      relatorio6,
+    ],
+  },
+  {
+    id: 2,
     title: "SGI Comanda",
     description: "Aplicativo desenvolvido para gerenciamento de comandas.",
     about:
@@ -64,7 +102,7 @@ const projectsData = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Eficiente MS Delivery",
     description:
       "Projeto que fui responsável por fornecer manutenção durante minha passagem pela VCA Sistemas.",
@@ -81,7 +119,7 @@ const projectsData = [
     imgs: [eficiente1, eficiente2, eficiente3, eficiente4, eficiente5],
   },
   {
-    id: 3,
+    id: 4,
     title: "Empire Burger",
     description:
       "Projeto desenvolvido com código altoral através do desafio proposto pela plataforma BRChallenges.",
